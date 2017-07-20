@@ -1,12 +1,10 @@
-
-
 module.exports = {
     entry: {
         index: __dirname + '/src/index.js',
     },
     output: {
         path: __dirname + '/dist',
-        filename: '[name].bundle.js',
+        filename: 'bundle.js',
     },
     module: {
         rules: [
@@ -17,6 +15,16 @@ module.exports = {
                     query: {
                         presets: ['es2015'],
                     },
+                }],
+            },
+            {
+                test: /\.scss$/,
+                use: [{
+                    loader: 'style-loader'
+                }, {
+                    loader: 'css-loader'
+                }, {
+                    loader: 'sass-loader'
                 }],
             },
         ],
