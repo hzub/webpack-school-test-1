@@ -1,1 +1,5 @@
-module.exports = 'this is module A';
+module.exports = class ClassA {
+    foo() {
+        return 'bar';
+    }
+}

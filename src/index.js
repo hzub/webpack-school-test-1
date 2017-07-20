@@ -1,6 +1,8 @@
-var moduleA = require('./moduleA.js');
+var ClassA = require('./moduleA.js');
 var moduleB = require('./moduleB.js');
 
-console.info('Module A output: ', moduleA);
+var obj = new ClassA();
+
+console.info('Method from class A output: ', obj.foo());
 console.info('Module B output: ', moduleB);
 console.info("hello, this is webpack!");
